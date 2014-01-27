@@ -12,6 +12,10 @@ extern NSString *const UserDidLoginNotification;
 extern NSString *const UserDidLogoutNotification;
 
 @interface User : RestObject
+@property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSString *profileImageUrl;
+@property (nonatomic, strong, readonly) NSString *screenName;
+
 
 + (User *)currentUser;
 + (void)setCurrentUser:(User *)currentUser;

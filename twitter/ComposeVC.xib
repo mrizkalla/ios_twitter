@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeVC">
+            <connections>
+                <outlet property="charCounterLabel" destination="Uwf-x0-4lC" id="A54-0Q-mBJ"/>
+                <outlet property="nameLabel" destination="woS-z5-8SM" id="jnQ-1l-m60"/>
+                <outlet property="profileImageView" destination="3yl-mN-cgj" id="vZq-Zw-xto"/>
+                <outlet property="screenNameLabel" destination="TKy-3O-0na" id="jHE-RU-o1t"/>
+                <outlet property="tweetTextView" destination="3tL-0n-QtD" id="3PJ-Ek-uZh"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3yl-mN-cgj">
+                    <rect key="frame" x="20" y="72" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="cKr-m7-rqj"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arty McTester" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woS-z5-8SM">
+                    <rect key="frame" x="68" y="72" width="106" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@testy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKy-3O-0na">
+                    <rect key="frame" x="68" y="91" width="67" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="67" id="hSF-uf-cDp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tL-0n-QtD">
+                    <rect key="frame" x="20" y="121" width="280" height="114"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="114" id="Mi6-hc-Kn7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                </textView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="igp-vt-o0J">
+                    <rect key="frame" x="0.0" y="62" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nh-Ti-3je">
+                    <rect key="frame" x="260" y="27" width="40" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Tweet">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onTweetButton:" destination="-1" eventType="touchUpInside" id="8T4-uy-ejN"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="140" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwf-x0-4lC">
+                    <rect key="frame" x="185" y="31" width="29" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fs2-sm-ga9">
+                    <rect key="frame" x="14" y="27" width="48" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Cancel">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onCancelButton:" destination="-1" eventType="touchUpInside" id="BTs-Mb-dgp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3tL-0n-QtD" secondAttribute="trailing" constant="20" symbolic="YES" id="5BV-6W-hOg"/>
+                <constraint firstItem="3yl-mN-cgj" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="5Bd-eZ-tcJ"/>
+                <constraint firstItem="3tL-0n-QtD" firstAttribute="leading" secondItem="3yl-mN-cgj" secondAttribute="leading" id="5sr-ML-cbC"/>
+                <constraint firstItem="woS-z5-8SM" firstAttribute="leading" secondItem="3yl-mN-cgj" secondAttribute="trailing" constant="8" symbolic="YES" id="Bk8-om-d2O"/>
+                <constraint firstItem="woS-z5-8SM" firstAttribute="top" secondItem="3yl-mN-cgj" secondAttribute="top" id="C3W-3p-DVD"/>
+                <constraint firstItem="TKy-3O-0na" firstAttribute="leading" secondItem="3yl-mN-cgj" secondAttribute="trailing" constant="8" symbolic="YES" id="MQf-2h-lbz"/>
+                <constraint firstItem="TKy-3O-0na" firstAttribute="top" secondItem="1" secondAttribute="top" constant="91" id="Vha-oT-sKn"/>
+                <constraint firstItem="3yl-mN-cgj" firstAttribute="top" secondItem="1" secondAttribute="top" constant="72" id="cdV-NY-yJp"/>
+                <constraint firstItem="3tL-0n-QtD" firstAttribute="top" secondItem="woS-z5-8SM" secondAttribute="bottom" constant="28" id="sIW-6b-fqE"/>
+                <constraint firstItem="3tL-0n-QtD" firstAttribute="top" secondItem="3yl-mN-cgj" secondAttribute="bottom" constant="9" id="vj0-WY-1r0"/>
+                <constraint firstItem="TKy-3O-0na" firstAttribute="bottom" secondItem="3yl-mN-cgj" secondAttribute="bottom" id="zwi-kX-shM"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

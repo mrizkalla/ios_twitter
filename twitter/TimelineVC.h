@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ComposeVC.h"
 
-@interface TimelineVC : UITableViewController
+@interface TimelineVC : UITableViewController <ComposeVCDelegate>
+
 
 @end
