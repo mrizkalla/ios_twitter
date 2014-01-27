@@ -194,7 +194,7 @@
     cell.tweetTextView.textContainerInset = UIEdgeInsetsZero;
     cell.nameLabel.text = tweet.name;
     cell.screenNameLabel.text = [NSString stringWithFormat:@"@%@", tweet.screenName];
-    cell.timeLabel.text = tweet.time;
+    cell.timeLabel.text = tweet.timeSince;
     
     // Set the profile image with rounded corners
     [cell.avatarImage setImageWithURL:[NSURL URLWithString:tweet.profileUrl]];
@@ -209,7 +209,7 @@
     cell.tweetTextView.textContainerInset = UIEdgeInsetsZero;
     cell.nameLabel.text = tweet.retweetedName;
     cell.screenNameLabel.text = [NSString stringWithFormat:@"@%@", tweet.retweetedScreenName];
-    cell.timeLabel.text = tweet.time;
+    cell.timeLabel.text = tweet.timeSince;
     cell.actionLabel.text = [NSString stringWithFormat:@"%@ retweeted", tweet.name];
 
     

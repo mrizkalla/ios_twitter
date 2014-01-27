@@ -13,7 +13,8 @@
 @interface ComposeVC : UIViewController <UITextViewDelegate>
 
 @property (nonatomic, weak) id<ComposeVCDelegate> delegate;
-
+@property (nonatomic, strong) NSString* prependText;
+@property (nonatomic, strong) NSString* in_reply_to_status_id;
 
 @end
 

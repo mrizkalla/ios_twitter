@@ -26,6 +26,10 @@
 }
 
 - (NSString *)time {
+    return [self.data valueOrNilForKeyPath:@"created_at"];
+}
+
+- (NSString *)timeSince {
     return [self dateDiff:[self.data valueOrNilForKeyPath:@"created_at"]];
 }
 
@@ -47,6 +51,22 @@
 
 - (NSString *)retweetedProfileUrl {
     return [self.data valueOrNilForKeyPath:@"retweeted_status.user.profile_image_url"];
+}
+
+- (NSString *)tweetId {
+    return [self.data valueOrNilForKeyPath:@"id_str"];
+}
+
+- (NSString *)retweetedId {
+    return [self.data valueOrNilForKeyPath:@"retweeted_status.id_str"];
+}
+
+- (NSString *)favoriteCount {
+    return [self.data valueOrNilForKeyPath:@"favorite_count"];
+}
+
+- (NSString *)retweetCount {
+    return [self.data valueOrNilForKeyPath:@"retweet_count"];
 }
 
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array {

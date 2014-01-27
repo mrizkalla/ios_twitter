@@ -52,6 +52,9 @@
     // Set the delegate
     self.tweetTextView.delegate = self;
     
+    // Set any prepend text if passed in
+    self.tweetTextView.text = self.prependText;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,7 +66,7 @@
 - (IBAction)onTweetButton:(id)sender {
     NSLog (@"On Tweet called");
 
-    [[TwitterClient instance] tweetThis:self.tweetTextView.text success:^(AFHTTPRequestOperation *operation, id response) {
+    [[TwitterClient instance] tweetThis:self.tweetTextView.text inReplyToId:self.in_reply_to_status_id success:^(AFHTTPRequestOperation *operation, id response) {
         
         NSLog(@"Retweet response%@", response);
         
