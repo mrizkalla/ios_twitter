@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberRetweetsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberFavoritesLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tweetTextViewHeightConstraint;
 - (void)onComposeButton;
 
 @end
@@ -45,8 +46,11 @@ const int TWEETVIEWWIDTH = 280;
     self.profileImageView.layer.masksToBounds = YES;
     
     self.nameLabel.text = self.tweet.retweetedName == nil ? self.tweet.name : self.tweet.retweetedName;
-    self.screeNameLabel.text = self.tweet.retweetedScreenName == nil ? self.tweet.retweetedScreenName : self.tweet.retweetedScreenName;
+    self.screeNameLabel.text = [NSString stringWithFormat:@"@%@", self.tweet.retweetedScreenName == nil ? self.tweet.screenName : self.tweet.retweetedScreenName];
     self.tweetTextView.text = self.tweet.retweetedText == nil ? self.tweet.text : self.tweet.retweetedText;
+    [self.tweetTextView sizeToFit];
+    self.tweetTextViewHeightConstraint.constant = self.tweetTextView.frame.size.height;
+
     /*
     NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]};
     CGRect rect = [self.tweetTextView.text boundingRectWithSize:CGSizeMake(TWEETVIEWWIDTH, MAXFLOAT)
